@@ -2,13 +2,16 @@ import "./App.css";
 import { useState, useMemo } from "react";
 import Header from "./components/Header";
 import { DashboardStats } from "./components/DashBoardStats";
+import { EmployeeGrid } from "./components/EmployeeGrid";
 import { Sidebar } from "./components/Sidebar";
 import type { Employee, DashboardStats as StatsType } from "./types/Employee";
 import { employeeData } from "./data/employee-data";
+import { useTheme } from "./hooks/useTheme";
 
 function App() {
   const [sidebarOpen, setSidebarOpen] = useState(false);
-  const [employees, setEmployees] = useState<Employee[]>(employeeData);
+  const [employees] = useState<Employee[]>(employeeData);
+  const { isDark } = useTheme();
 
   const stats: StatsType = useMemo(() => {
     const activeEmployees = employees.filter((emp) => emp.isActive).length;
@@ -47,12 +50,7 @@ function App() {
                   </div>
                 </div>
 
-                {/* <EmployeeGrid
-                  employees={employees}
-                  onRowDoubleClick={handleRowDoubleClick}
-                  onSelectionChanged={setSelectedEmployees}
-                  isDark={isDark}
-                /> */}
+                <EmployeeGrid employees={employees} isDark={isDark}/>
               </div>
             </div>
           </div>
