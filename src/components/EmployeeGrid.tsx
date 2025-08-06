@@ -62,8 +62,6 @@ export const EmployeeGrid: React.FC<EmployeeGridProps> = ({
         field: "department",
         headerName: "Department",
         width: 140,
-        rowGroup: true,
-        hide: true,
       },
       {
         field: "position",
@@ -156,13 +154,13 @@ export const EmployeeGrid: React.FC<EmployeeGridProps> = ({
           defaultColDef={defaultColDef}
           quickFilterText={quickFilter}
           rowSelection="multiple"
-          groupDisplayType="groupRows"
           animateRows={true}
           pagination={true}
           paginationPageSize={10}
           paginationPageSizeSelector={[10, 20, 50]}
           suppressRowClickSelection={true}
           rowHeight={70}
+          theme="legacy"
         />
       </div>
     </div>
