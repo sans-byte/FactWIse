@@ -40,7 +40,7 @@ function App() {
             <div className="max-w-7xl mx-auto h-full flex flex-col">
               <DashboardStats stats={stats} />
 
-              <div className="bg-white dark:bg-gray-800 rounded-xl shadow-sm border border-gray-200 dark:border-gray-700 flex-1 p-6">
+              <div className="bg-white dark:bg-gray-800 rounded-xl shadow-sm border border-gray-200 dark:border-gray-700 flex-1 p-6 overflow-x-scroll">
                 <div className="flex items-center justify-between mb-6">
                   <h2 className="text-xl font-semibold text-gray-900 dark:text-white">
                     Employee Directory
@@ -50,7 +50,7 @@ function App() {
                   </div>
                 </div>
 
-                <EmployeeGrid employees={employees} isDark={isDark}/>
+                <EmployeeGrid employees={employees} isDark={isDark} />
               </div>
             </div>
           </div>

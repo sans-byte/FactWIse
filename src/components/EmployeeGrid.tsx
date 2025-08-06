@@ -132,7 +132,7 @@ export const EmployeeGrid: React.FC<EmployeeGridProps> = ({
   );
 
   return (
-    <div className="h-20 flex flex-col ">
+    <div className="h-full flex flex-col">
       <div className="mb-4">
         <input
           type="text"
@@ -146,7 +146,7 @@ export const EmployeeGrid: React.FC<EmployeeGridProps> = ({
       <div
         className={`ag-theme-alpine ${
           isDark ? "ag-theme-alpine-dark" : ""
-        } flex-1 min-h-[600px]`}
+        } flex-1 min-h-0`}
       >
         <AgGridReact
           rowData={employees}
@@ -158,8 +158,7 @@ export const EmployeeGrid: React.FC<EmployeeGridProps> = ({
           pagination={true}
           paginationPageSize={10}
           paginationPageSizeSelector={[10, 20, 50]}
-          suppressRowClickSelection={true}
-          rowHeight={70}
+          rowHeight={50}
           theme="legacy"
         />
       </div>
