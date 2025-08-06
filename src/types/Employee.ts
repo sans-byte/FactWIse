@@ -15,3 +15,10 @@ export interface Employee {
   skills: string[];
   manager: string | null;
 }
+
+export interface DashboardStats {
+  totalEmployees: number;
+  activeEmployees: number;
+  departments: number;
+  avgRating: number;
+}
