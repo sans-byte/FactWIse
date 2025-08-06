@@ -1,17 +1,11 @@
 import "./App.css";
-import { useTheme } from "./hooks/useTheme";
+import Header from "./components/Header";
 
 function App() {
-  const { toggleTheme } = useTheme();
-
   return (
     <>
-      <div className="text-6xl dark:bg-background text-foreground">
-        Hello world
-      </div>
-      <button className="" onClick={toggleTheme}>
-        click me
-      </button>
+      <div className=""></div>
+      <Header />
     </>
   );
 }
